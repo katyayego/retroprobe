@@ -5,6 +5,8 @@ import argparse, os, pickle, re, sys
 import numpy as np
 
 from collections import OrderedDict
+from collections import defaultdict
+
 
 # local imports
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))

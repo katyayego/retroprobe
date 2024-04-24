@@ -13,7 +13,7 @@
 
 # experiment variables
 # please update these on your machine
-UD_PATH=/path/to/ud-treebanks
+UD_PATH=~/code/data/deep/
 TARGETS=( ar-padt en-ewt eu-bdt fi-tdt he-htb hi-hdtb it-isdt ja-gsd ko-gsd ru-syntagrus sv-talbanken tr-imst zh-gsd )
 LANGUAGES=( Arabic English Basque Finnish Hebrew Hindi Italian Japanese Korean Russian Swedish Turkish Chinese )
 TREEBANKS=( PADT EWT BDT TDT HTB HDTB ISDT GSD GSD SynTagRus Talbanken IMST GSD )
@@ -34,6 +34,7 @@ done
 # run experiments
 mkdir -p exp/run
 exp_path=exp/run
+exp_dir=exp/run
 # iterate over seeds
 for rsd_idx in "${!SEEDS[@]}"; do
 	# iterate over source treebanks
