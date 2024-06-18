@@ -25,7 +25,7 @@ def parse_arguments():
 		'-ds', '--dependency_size', type=int, default=128,
 		help='dimensionality of dependency space transformation (default: 128)')
 	arg_parser.add_argument(
-		'-pt', '--parser_type', default='depprobe', choices=['structural', 'directed', 'depprobe', 'depprobe-mix'],
+		'-pt', '--parser_type', default='depprobe', choices=['structural', 'directed', 'depprobe', 'depprobe-mix', 'retroprobe'],
 		help='parser type (default: depprobe)')
 	arg_parser.add_argument(
 		'-pd', '--parser_decode', default=False, action='store_true',
@@ -121,6 +121,7 @@ def main():
 		stats['time'].append(time.time())
 
 		# store and print statistics
+		print(cur_stats)
 		statistics('eval', stats, cur_stats, ep_idx, args.epochs)
 		cur_eval_loss = stats['eval/loss'][-1]
 

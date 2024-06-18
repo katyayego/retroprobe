@@ -13,23 +13,28 @@
 
 # experiment variables
 # please update these on your machine
-UD_PATH=~/code/data/deep/
+UD_PATH=~/data/acl-datasets/
 TARGETS=( ar-padt en-ewt eu-bdt fi-tdt he-htb hi-hdtb it-isdt ja-gsd ko-gsd ru-syntagrus sv-talbanken tr-imst zh-gsd )
 LANGUAGES=( Arabic English Basque Finnish Hebrew Hindi Italian Japanese Korean Russian Swedish Turkish Chinese )
 TREEBANKS=( PADT EWT BDT TDT HTB HDTB ISDT GSD GSD SynTagRus Talbanken IMST GSD )
+# TARGETS=( ru-syntagrus sv-talbanken )
+# LANGUAGES=( Russian Swedish )
+# TREEBANKS=( SynTagRus Talbanken )
 SPLIT="test"
-MODELS=( directed depprobe )
+# MODELS=( directed depprobe retroprobe )
+# MODELS=( retroprobe )
+MODELS=( depprobe )
 SEEDS=( 41 42 43 )
 
 # set up data
-mkdir -p exp/data
-echo "Creating Universal Dependencies split definition..."
-python data/split.py $UD_PATH exp/data/ --keep_all
-for idx in "${!TARGETS[@]}"; do
-	echo "Creating split definition for treebank ${TARGETS[$idx]}..."
-	mkdir exp/data/"${TARGETS[$idx]}"
-	python data/filter.py $UD_PATH exp/data/split.pkl exp/data/"${TARGETS[$idx]}" -il "${LANGUAGES[$idx]}" -it "${TREEBANKS[$idx]}"
-done
+# mkdir -p exp/data
+# echo "Creating Universal Dependencies split definition..."
+# python data/split.py $UD_PATH exp/data/ --keep_all
+# for idx in "${!TARGETS[@]}"; do
+# 	echo "Creating split definition for treebank ${TARGETS[$idx]}..."
+# 	mkdir exp/data/"${TARGETS[$idx]}"
+# 	python data/filter.py $UD_PATH exp/data/split.pkl exp/data/"${TARGETS[$idx]}" -il "${LANGUAGES[$idx]}" -it "${TREEBANKS[$idx]}"
+# done
 
 # run experiments
 mkdir -p exp/run
@@ -58,10 +63,25 @@ for rsd_idx in "${!SEEDS[@]}"; do
 			;;
 
 			depprobe)
-			python train.py ${UD_PATH} ${exp_path} \
+# 			python train.py ${UD_PATH} ${exp_path} \
+# 				-s exp/data/${source_tb}/filtered.pkl \
+# 				-pt rooted -el 6 7 \
+# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+            python train.py ${UD_PATH} ${exp_path} \
 				-s exp/data/${source_tb}/filtered.pkl \
-				-pt rooted -el 6 7 \
+				-pt depprobe -el 6 7 \
 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+			;;
+			
+			retroprobe)
+# 			python train.py ${UD_PATH} ${exp_path} \
+# 				-s exp/data/${source_tb}/filtered.pkl \
+# 				-pt rooted -el 6 7 \
+# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+            python train.py ${UD_PATH} ${exp_path} \
+				-s exp/data/${source_tb}/filtered.pkl \
+				-pt retroprobe -el 6 7 \
+				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]} -bs 12
 			;;
 
 			*)
@@ -85,8 +105,17 @@ for rsd_idx in "${!SEEDS[@]}"; do
 				;;
 
 				depprobe)
+# 				python predict.py ${exp_path} ${target_file} ${pred_file} \
+# 					-pt rooted -el 6 7 \
 				python predict.py ${exp_path} ${target_file} ${pred_file} \
-					-pt rooted -el 6 7 \
+					-pt depprobe -el 6 7 \
+				;;
+				
+				retroprobe)
+# 				python predict.py ${exp_path} ${target_file} ${pred_file} \
+# 					-pt rooted -el 6 7 \
+				python predict.py ${exp_path} ${target_file} ${pred_file} \
+					-pt retroprobe -el 6 7 \
 				;;
 
 				*)
