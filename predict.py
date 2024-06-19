@@ -56,7 +56,7 @@ def main():
 
 	# load state dict of best checkpoint
 	if os.path.exists(os.path.join(args.exp_path, 'best.tar')):
-		checkpoint = torch.load(os.path.join(args.exp_path, 'best.tar')
+		checkpoint = torch.load(os.path.join(args.exp_path, 'best.tar'))
 	else:
 		checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
 

@@ -52,42 +52,42 @@ for rsd_idx in "${!SEEDS[@]}"; do
 			exp_path=${exp_dir}/${model}/${source_tb}-rs${SEEDS[$rsd_idx]}
 			echo "[$src_idx/$mdl_idx] $source_tb ($model)..."
 
-			# train model
-			case $model in
+# 			# train model
+# 			case $model in
 			
-			directed)
-			python train.py ${UD_PATH} ${exp_path} \
-				-s exp/data/${source_tb}/filtered.pkl \
-				-pt directed -el 7 \
-				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-			;;
-
-			depprobe)
+# 			directed)
 # 			python train.py ${UD_PATH} ${exp_path} \
 # 				-s exp/data/${source_tb}/filtered.pkl \
-# 				-pt rooted -el 6 7 \
+# 				-pt directed -el 7 \
 # 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-            python train.py ${UD_PATH} ${exp_path} \
-				-s exp/data/${source_tb}/filtered.pkl \
-				-pt depprobe -el 6 7 \
-				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-			;;
-			
-			retroprobe)
-# 			python train.py ${UD_PATH} ${exp_path} \
-# 				-s exp/data/${source_tb}/filtered.pkl \
-# 				-pt rooted -el 6 7 \
-# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-            python train.py ${UD_PATH} ${exp_path} \
-				-s exp/data/${source_tb}/filtered.pkl \
-				-pt retroprobe -el 6 7 \
-				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]} -bs 12
-			;;
+# 			;;
 
-			*)
-			echo "Unknown model '${model}'."
-			;;
-			esac
+# 			depprobe)
+# # 			python train.py ${UD_PATH} ${exp_path} \
+# # 				-s exp/data/${source_tb}/filtered.pkl \
+# # 				-pt rooted -el 6 7 \
+# # 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+#             python train.py ${UD_PATH} ${exp_path} \
+# 				-s exp/data/${source_tb}/filtered.pkl \
+# 				-pt depprobe -el 6 7 \
+# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+# 			;;
+			
+# 			retroprobe)
+# # 			python train.py ${UD_PATH} ${exp_path} \
+# # 				-s exp/data/${source_tb}/filtered.pkl \
+# # 				-pt rooted -el 6 7 \
+# # 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+#             python train.py ${UD_PATH} ${exp_path} \
+# 				-s exp/data/${source_tb}/filtered.pkl \
+# 				-pt retroprobe -el 6 7 \
+# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]} -bs 12
+# 			;;
+
+# 			*)
+# 			echo "Unknown model '${model}'."
+# 			;;
+# 			esac
 
 			# iterate over target treebanks
 			for tgt_idx in "${!TARGETS[@]}"; do
