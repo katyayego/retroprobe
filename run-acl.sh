@@ -62,27 +62,27 @@ for rsd_idx in "${!SEEDS[@]}"; do
 # 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
 # 			;;
 
-# 			depprobe)
-# # 			python train.py ${UD_PATH} ${exp_path} \
-# # 				-s exp/data/${source_tb}/filtered.pkl \
-# # 				-pt rooted -el 6 7 \
-# # 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-#             python train.py ${UD_PATH} ${exp_path} \
+			depprobe)
+# 			python train.py ${UD_PATH} ${exp_path} \
 # 				-s exp/data/${source_tb}/filtered.pkl \
-# 				-pt depprobe -el 6 7 \
+# 				-pt rooted -el 6 7 \
 # 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-# 			;;
+            python train.py ${UD_PATH} ${exp_path} \
+				-s exp/data/${source_tb}/filtered.pkl \
+				-pt depprobe -el 6 7 \
+				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+			;;
 			
-# 			retroprobe)
-# # 			python train.py ${UD_PATH} ${exp_path} \
-# # 				-s exp/data/${source_tb}/filtered.pkl \
-# # 				-pt rooted -el 6 7 \
-# # 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-#             python train.py ${UD_PATH} ${exp_path} \
+			retroprobe)
+# 			python train.py ${UD_PATH} ${exp_path} \
 # 				-s exp/data/${source_tb}/filtered.pkl \
-# 				-pt retroprobe -el 6 7 \
-# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]} -bs 12
-# 			;;
+# 				-pt rooted -el 6 7 \
+# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+            python train.py ${UD_PATH} ${exp_path} \
+				-s exp/data/${source_tb}/filtered.pkl \
+				-pt retroprobe -el 6 7 \
+				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]} -bs 12
+			;;
 
 # 			*)
 # 			echo "Unknown model '${model}'."
