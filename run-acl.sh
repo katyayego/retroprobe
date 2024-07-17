@@ -14,16 +14,16 @@
 # experiment variables
 # please update these on your machine
 UD_PATH=~/data/acl-datasets/
-TARGETS=( ar-padt en-ewt eu-bdt fi-tdt he-htb hi-hdtb it-isdt ja-gsd ko-gsd ru-syntagrus sv-talbanken tr-imst zh-gsd )
-LANGUAGES=( Arabic English Basque Finnish Hebrew Hindi Italian Japanese Korean Russian Swedish Turkish Chinese )
-TREEBANKS=( PADT EWT BDT TDT HTB HDTB ISDT GSD GSD SynTagRus Talbanken IMST GSD )
-# TARGETS=( ru-syntagrus sv-talbanken )
-# LANGUAGES=( Russian Swedish )
-# TREEBANKS=( SynTagRus Talbanken )
+# TARGETS=( ar-padt en-ewt eu-bdt fi-tdt he-htb hi-hdtb it-isdt ja-gsd ko-gsd ru-syntagrus sv-talbanken tr-imst zh-gsd )
+# LANGUAGES=( Arabic English Basque Finnish Hebrew Hindi Italian Japanese Korean Russian Swedish Turkish Chinese )
+# TREEBANKS=( PADT EWT BDT TDT HTB HDTB ISDT GSD GSD SynTagRus Talbanken IMST GSD )
+TARGETS=( ar-padt )
+LANGUAGES=( Arabic )
+TREEBANKS=( PADT )
 SPLIT="test"
 # MODELS=( directed depprobe retroprobe )
-# MODELS=( retroprobe )
-MODELS=( depprobe )
+MODELS=( retroprobe )
+# MODELS=( depprobe )
 SEEDS=( 41 42 43 )
 
 # set up data
@@ -52,15 +52,15 @@ for rsd_idx in "${!SEEDS[@]}"; do
 			exp_path=${exp_dir}/${model}/${source_tb}-rs${SEEDS[$rsd_idx]}
 			echo "[$src_idx/$mdl_idx] $source_tb ($model)..."
 
-# 			# train model
-# 			case $model in
+# 			train model
+			case $model in
 			
-# 			directed)
-# 			python train.py ${UD_PATH} ${exp_path} \
-# 				-s exp/data/${source_tb}/filtered.pkl \
-# 				-pt directed -el 7 \
-# 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
-# 			;;
+			directed)
+			python train.py ${UD_PATH} ${exp_path} \
+				-s exp/data/${source_tb}/filtered.pkl \
+				-pt directed -el 7 \
+				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
+			;;
 
 			depprobe)
 # 			python train.py ${UD_PATH} ${exp_path} \
@@ -84,10 +84,10 @@ for rsd_idx in "${!SEEDS[@]}"; do
 				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]} -bs 12
 			;;
 
-# 			*)
-# 			echo "Unknown model '${model}'."
-# 			;;
-# 			esac
+			*)
+			echo "Unknown model '${model}'."
+			;;
+			esac
 
 			# iterate over target treebanks
 			for tgt_idx in "${!TARGETS[@]}"; do

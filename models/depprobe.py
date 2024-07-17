@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-
+import torch.nn.functional as F
 
 #
 # DepProbe
@@ -130,7 +130,7 @@ class RetroProbe(nn.Module):
 		# internal models
 		self._emb = emb_model
 		self._arc = RootedGraphPredictor(self._emb.emb_dim, dep_dim)
-		self._lbl = DependencyLabelClassifier(self._emb.emb_dim, len(dep_rels), self._root_label)
+		self._lbl = DependencyLabelClassifier(self._emb.emb_dim*2, len(dep_rels), self._root_label)
 
 	def __repr__(self):
 		return \
@@ -256,64 +256,88 @@ class DependencyLabelClassifier(nn.Module):
 		self._num_labels = num_labels  # number of labels (e.g. 37)
 		self._root_label = root_label  # index of root label
 		# trainable parameters
-		self._mlp = nn.Linear(self._in_dim*2, self._num_labels, bias=False)
+		self._mlp = nn.Linear(self._in_dim, self._num_labels, bias=False)
 
 	def forward(self, emb_sentences, att_sentences):
 		# logits for all tokens in all sentences + padding -inf (batch_size, max_len, num_labels)
+# 		print(emb_sentences.size())
+# 		print(att_sentences.size())
+		
+
+		# pass through MLP
+		att_sentences_expanded = torch.zeros(
+			(att_sentences.shape[0], int((att_sentences.shape[1] * (att_sentences.shape[1]-1)+ att_sentences.shape[1]))),dtype=torch.bool,
+			device=emb_sentences.device
+		) 
+		print("att sentences expanded")
+		print(att_sentences_expanded.size())
+		for i in range(att_sentences.size()[0]):
+			for j in range(att_sentences.size()[1]):
+				for k in range(j+1, att_sentences.size()[1]):
+					if att_sentences[i][j].item() is True and att_sentences[i][k].item() is True:
+						att_sentences_expanded[i][j+k-1] = True
+					else: 
+						att_sentences_expanded[i][j+k-1] = False
+# 		logits_append_size = int((att_sentences.shape[1] * (att_sentences.shape[1]-1)+ att_sentences.shape[1]))
 		logits = torch.ones(
-			(att_sentences.shape[0], int((att_sentences.shape[1] * (att_sentences.shape[1]-1))/2), self._num_labels),
+			(att_sentences_expanded.shape[0], att_sentences_expanded.shape[1], self._num_labels),
 			device=emb_sentences.device
 		) * float('-inf')
-		print("logits")
-		print(logits.size())
-		# get token embeddings of all sentences (total_tokens, emb_dim)
-		emb_words = emb_sentences[att_sentences, :]
-		# should be (total_tokens(total_tokens-1), emb_dim)
-# 		emb_concat_words = torch.zeros((emb_words.size()[0]*(emb_words.size()[0]-1), emb_words.size()[1]*2),
-# 			device=emb_sentences.device)
+		
+# 		get token embeddings of all sentences (total_tokens, emb_dim)
+		new_size = int((emb_sentences.size()[1]*(emb_sentences.size()[1]-1)+ emb_sentences.size()[1]))
+		emb_sentences_expanded = torch.zeros((emb_sentences.size()[0], new_size, emb_sentences.size()[2]*2), device=emb_sentences.device)
 # 		k = 0
+		start_token = torch.ones_like(emb_sentences[0][0])* float('-inf')
+		for m in range(emb_sentences.size()[0]):
+			k = 0
+			for i in range(emb_sentences.size()[1]):
+				for j in range(emb_sentences.size()[1]):
+					if i != j:
+						emb_sentences_expanded[m][k] = torch.cat((emb_sentences[m][i], emb_sentences[m][j]), 0)
+						k+=1
+				emb_sentences_expanded[m][k] = torch.cat((start_token, emb_sentences[m][i]), 0)
+				k+=1
+		emb_words = emb_sentences_expanded[att_sentences_expanded, :]
+# 		emb_words = emb_sentences[att_sentences, :]
+# 		new_size = int((emb_words.size()[0]*(emb_words.size()[0]-1)+ emb_words.size()[0]))
+# # 		print(new_size)
+# # 		print(logits_append_size)
+# 		emb_concat_words = torch.zeros((new_size, emb_words.size()[1]*2), device=emb_sentences.device)
+# 		k = 0
+# 		start_token = torch.ones_like(emb_words[1])* float('-inf')
 # 		for i in range(emb_words.size()[0]):
 # 			for j in range(emb_words.size()[0]):
 # 				if i != j:
 # 					emb_concat_words[k] = torch.cat((emb_words[i],emb_words[j]), 0)
 # 					k+=1
-		new_size = int((emb_words.size()[0]*(emb_words.size()[0]-1))/2)
-		print(new_size)
-		print(int((att_sentences.shape[1] * (att_sentences.shape[1]-1))/2))
-		emb_concat_words = torch.zeros((new_size, emb_words.size()[1]*2), device=emb_sentences.device)
-		k = 0
-		for i in range(emb_words.size()[0]):
-			for j in range(i+1,emb_words.size()[0]):
-				if i != j:
-					emb_concat_words[k] = torch.cat((emb_words[i],emb_words[j]), 0)
-					k+=1
-		# pass through MLP
-# 		att_sentences_expanded = torch.ones(
-# 			(att_sentences.shape[0], att_sentences.shape[1] * (att_sentences.shape[1]-1)),
-# 			device=emb_sentences.device
-# 		) 
-# 		k = att_sentences.size()[1]-1
-# 		for i in range(att_sentences.size()[0]):
-# 			for j in range(att_sentences.size()[1]):
-# 				att_sentences_expanded[i][(j*k):(j*k)+k] = att_sentences[i][j].item()
-		att_sentences_expanded = torch.zeros(
-			(att_sentences.shape[0], new_size),dtype=torch.bool,
-			device=emb_sentences.device
-		) 
-		print("app sent")
-		print(att_sentences_expanded.size())
-		for i in range(att_sentences.size()[0]):
-			for j in range(att_sentences.size()[1]):
-				for k in range(j+1, att_sentences.size()[1]):
-					if att_sentences[i][j].item() is True or att_sentences[i][k].item() is True:
-						att_sentences_expanded[i][j+k-1] = True
-					else: 
-						att_sentences_expanded[i][j+k-1] = False
-		logits[att_sentences_expanded, :] = self._mlp(emb_concat_words)  # (num_words, num_labels) -> (batch_size, max_len, num_labels)
+# 			emb_concat_words[k] = torch.cat((start_token, emb_words[i]), 0)
+# 		new_size = int((emb_sentences.size()[1]*(emb_sentences.size()[1]-1)+ emb_sentences.size()[1]))
+# 		emb_concat_words = torch.zeros((emb_sentences.size()[0], new_size, emb_sentences.size()[2]*2), device=emb_sentences.device)
+# 		k = 0
+# 		start_token = torch.ones_like(emb_sentences[0][0])* float('-inf')
+# 		for m in range(emb_sentences.size()[0]):
+# 			for i in range(emb_sentences.size()[1]):
+# 				for j in range(emb_sentences.size()[1]):
+# 					if i != j:
+# 						emb_concat_words[m][k] = torch.cat((emb_sentences[m][i],emb_sentences[m][j]), 0)
+# 						k+=1
+# 				emb_concat_words[m][k] = torch.cat((start_token, emb_sentences[m][i]), 0)
+# 				k+=1
+
+		print("logits")
+		print(logits.size())
+		print("emb words")
+		print(emb_words.size())
+		logits[att_sentences_expanded, :] = self._mlp(emb_words)  # (num_words, num_labels) -> (batch_size, max_len, num_labels)
+		print(logits.size())
+		print(logits)
 		return logits
 
 	def get_labels(self, lbl_logits):
 		# gather word with highest root probability for each sentence
+		lbl_logits = F.softmax(lbl_logits, dim=-1)
+		lbl_logits = torch.nan_to_num(lbl_logits, nan=float('-inf'))
 		roots = torch.argmax(lbl_logits[:, :, self._root_label], dim=-1)  # (batch_size, 1)
 		# set root logits to -inf to prevent multiple roots
 		lbl_logits_noroot = lbl_logits.detach().clone()
@@ -358,6 +382,10 @@ class LabelClassifier(nn.Module):
 
 	def get_labels(self, lbl_logits):
 		# gather word with highest root probability for each sentence
+# 		print(lbl_logits)
+		lbl_logits = F.softmax(lbl_logits, dim=-1)
+		lbl_logits = torch.nan_to_num(lbl_logits, nan=float('-inf'))
+# 		print(lbl_logits)
 		roots = torch.argmax(lbl_logits[:, :, self._root_label], dim=-1)  # (batch_size, 1)
 		# set root logits to -inf to prevent multiple roots
 		lbl_logits_noroot = lbl_logits.detach().clone()
