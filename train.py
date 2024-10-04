@@ -53,7 +53,7 @@ def main():
 	args = parse_arguments()
 
 	# check if output dir exists
-	setup_output_directory(args.out_path)
+# 	setup_output_directory(args.out_path)
 
 	# setup logging
 	setup_logging(os.path.join(args.out_path, 'train.log'))
@@ -73,14 +73,25 @@ def main():
 	else:
 		eval_data = DepSpaceDataset(ud, rel_map, splits['dev'], args.batch_size)
 		logging.info(f"Loaded dev split with {len(eval_data)} sentences.")
-
-	# setup parser model
-	parser = setup_model(
-		lm_name=args.language_model, dep_dim=args.dependency_size,
-		parser_type=args.parser_type,
-		emb_layers=args.embedding_layers,
-		emb_cache=args.embedding_cache
-	)
+		
+	if os.path.exists(os.path.join(args.out_path, 'newest.tar')):
+		checkpoint = torch.load(os.path.join(args.out_path, 'newest.tar'))
+		# setup parser model
+		parser = setup_model(
+			lm_name=args.language_model, dep_dim=args.dependency_size,
+			parser_type=args.parser_type,
+			emb_layers=args.embedding_layers,
+			emb_cache=args.embedding_cache,
+			state_dict=checkpoint['parser_state']
+		)
+	else:
+		# setup parser model
+		parser = setup_model(
+			lm_name=args.language_model, dep_dim=args.dependency_size,
+			parser_type=args.parser_type,
+			emb_layers=args.embedding_layers,
+			emb_cache=args.embedding_cache
+		)
 
 	# setup loss
 	criterion = setup_criterion(parser_type=args.parser_type)
