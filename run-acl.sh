@@ -17,14 +17,15 @@ UD_PATH=~/data/acl-datasets/
 # TARGETS=( ar-padt en-ewt eu-bdt fi-tdt he-htb hi-hdtb it-isdt ja-gsd ko-gsd ru-syntagrus sv-talbanken tr-imst zh-gsd )
 # LANGUAGES=( Arabic English Basque Finnish Hebrew Hindi Italian Japanese Korean Russian Swedish Turkish Chinese )
 # TREEBANKS=( PADT EWT BDT TDT HTB HDTB ISDT GSD GSD SynTagRus Talbanken IMST GSD )
-TARGETS=( ar-padt )
-LANGUAGES=( Arabic )
-TREEBANKS=( PADT )
+TARGETS=( en-ewt )
+LANGUAGES=( English )
+TREEBANKS=( EWT )
 SPLIT="test"
 # MODELS=( directed depprobe retroprobe )
 MODELS=( retroprobe )
 # MODELS=( depprobe )
-SEEDS=( 41 42 43 )
+# SEEDS=( 41 42 43 )
+SEEDS=( 41 )
 
 # set up data
 # mkdir -p exp/data
@@ -81,7 +82,7 @@ for rsd_idx in "${!SEEDS[@]}"; do
             python train.py ${UD_PATH} ${exp_path} \
 				-s exp/data/${source_tb}/filtered.pkl \
 				-pt retroprobe -el 6 7 \
-				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]} -bs 12
+				-e 30 -es 3 -rs ${SEEDS[$rsd_idx]}
 			;;
 
 			*)

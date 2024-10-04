@@ -146,6 +146,11 @@ class RetroProbe(nn.Module):
 		super(RetroProbe, self).train(mode)
 		self._emb.eval()
 		return self
+	
+	def logsumexp(self, x):
+		c = torch.max(x, dim=-1).values
+		d = torch.sub(x, torch.unsqueeze(c, x.dim()-1))
+		return c + torch.logsumexp(d, dim=-1)
 
 	def forward(self, sentences, decode=True):
 		# embed sentences (batch_size, seq_length)
@@ -161,37 +166,89 @@ class RetroProbe(nn.Module):
 # 		print(distances)
 		parent_probs = F.softmin(distances, dim=-1)
 		parent_probs = parent_probs.type(torch.double)
-		parent_probs = torch.log(parent_probs)
+# 		print(parent_probs.size())
+# 		parent_probs_norm = self.logsumexp(parent_probs)
+# 		parent_probs_norm = torch.unsqueeze(parent_probs_norm,2)
+# 		parent_probs = torch.exp(parent_probs-parent_probs_norm)
+# 		parent_probs = torch.logsumexp(parent_probs, dim=-1)
 # 		print("SOFTMIN")
 # 		print(parent_probs)
 
 		# classify dependency relations
 		lbl_logits = self._lbl(emb_layers[1].detach(), att_sentences.detach())
+# 		print(lbl_logits.size())
 		max_size = att_sentences.size(dim=1)
 		lbl_logits = torch.reshape(lbl_logits, (lbl_logits.size(dim=0), max_size, max_size, lbl_logits.size(dim=-1)))
 		lbl_logits = lbl_logits.type(torch.double)
-		lbl_parent_logits = torch.zeros(lbl_logits.size(dim=0), max_size, max_size, lbl_logits.size(dim=-1),dtype=torch.double, device=lbl_logits.device)
+# 		print(lbl_logits.size())
+# 		lbl_parent_logits = torch.zeros(lbl_logits.size(dim=0), max_size, max_size, lbl_logits.size(dim=-1),dtype=torch.double, device=lbl_logits.device)
 # 		print(lbl_logits.size())
 # 		print(parent_probs.size())
-		lbl_logits = torch.log(lbl_logits)
-		for i in range(lbl_logits.size(dim=0)):
-			for j in range(max_size):
-				for k in range(max_size):
-					lbl_parent_logits[i,j,k] = torch.add(lbl_logits[i,j,k], parent_probs[i,j,k])
-		lbl_parent_logits = torch.nan_to_num(lbl_parent_logits, nan=-10)
+# 		lbl_logits = torch.logsumexp(lbl_logits, dim=-1)
+# 		lbl_logits_norm = self.logsumexp(lbl_logits)
+# 		lbl_logits_norm = torch.unsqueeze(lbl_logits_norm, 3)
+# 		lbl_logits = torch.exp(lbl_logits - lbl_logits_norm)
+		
+	
+		# lbllogits      B x child x Parent x label_probs
+		# parent_probs   B x child x Parent
+		
+		B, child, parent, label_probs = lbl_logits.shape
+# 		print("lbl logits shape")
+# 		print(lbl_logits.shape)
+# 		print(lbl_logits)
+		lbl_logits_f = torch.reshape(lbl_logits, (-1, parent, label_probs))
+		parent_probs_f = torch.reshape(parent_probs, (-1, parent))
+		
+		# lbl_logits_f      [B x child] x Parent x label_probs
+		# parent_probs_f    [B x child] x Parent
+		
+		parent_probs_f_u = torch.unsqueeze(parent_probs_f, -1)
+		
+		# parent_probs_f_u  [B x child] x Parent x 1
+		
+		
+# 		result = self.logsumexp(lbl_logits_f * parent_probs_f_u)
+# 		print(result.shape)
+# 		print("ligits")
+# 		print(lbl_logits_f * parent_probs_f_u)
+# 		result = torch.sum(lbl_logits_f * parent_probs_f_u, dim=1) #use log sum trick when multiplying
+# 		result = torch.logsumexp(lbl_logits_f + parent_probs_f_u, dim=1)
+		result = torch.sum(torch.logaddexp(lbl_logits_f, parent_probs_f_u), dim=1)
+		
+# 		result = [B x Child] x [label_probs]
+		
+		result_u = result.reshape((B, child, -1))
+# 		print("result shape")
+# 		print(result_u.shape)
+# 		print(result_u)
+		
+
+		#parent_probs = torch.unsqueeze(parent_probs, 3)
+		#lbl_parent_logits = torch.logaddexp(lbl_logits, parent_probs)
+		#lbl_parent_logits_norm = self.logsumexp(lbl_parent_logits)
+		#lbl_parent_logits_norm = torch.unsqueeze(lbl_parent_logits_norm, 3)
+		#lbl_parent_logits = torch.exp(lbl_parent_logits - lbl_parent_logits_norm)
+ 		
+
+		#for i in range(lbl_logits.size(dim=0)):
+# 			for j in range(max_size):
+# 				for k in range(max_size):
+# 					lbl_parent_logits[i,j,k] = torch.add(lbl_logits[i,j,k], parent_probs[i,j,k])
 # 		print(lbl_parent_logits)
 
 		# construct minimal return set
 		results = {
 			'dependency_embeddings': dep_embeddings,
 			'distances': distances,
-			'label_logits': lbl_parent_logits
+			'label_logits': result_u #lbl_parent_logits
 		}
 
 		# decode labelled dependency graph
 		if decode:
 			# get roots and labels from logits
-			roots, labels = self._lbl.get_labels(lbl_logits.detach())
+# 			roots, labels = self._lbl.get_labels(lbl_parent_logits.detach())
+			roots, labels = self._lbl.get_labels(result_u.detach())
 			# construct MST starting at root
 			graphs = self._arc.to_graph(roots.detach(), distances.detach(), att_sentences.detach())
 
@@ -284,8 +341,6 @@ class DependencyLabelClassifier(nn.Module):
 			(att_sentences.shape[0], int((att_sentences.shape[1] * (att_sentences.shape[1])))),dtype=torch.bool,
 			device=emb_sentences.device
 		) 
-# 		print("att sentences expanded")
-# 		print(att_sentences_expanded.size())
 		for i in range(att_sentences.size()[0]):
 			att_size = att_sentences.size()[1]
 			for j in range(att_size):
@@ -302,53 +357,78 @@ class DependencyLabelClassifier(nn.Module):
 		emb_sentences_expanded = torch.zeros((emb_sentences.size()[0], new_size, emb_sentences.size()[2]*2), device=emb_sentences.device)
 # 		k = 0
 		start_token = torch.ones_like(emb_sentences[0][0])
-		for m in range(emb_sentences.size()[0]):
-			k = 0
-			for i in range(emb_sentences.size()[1]):
-				for j in range(emb_sentences.size()[1]):
-					if i != j:
-						emb_sentences_expanded[m][k] = torch.cat((emb_sentences[m][i], emb_sentences[m][j]), 0)
-						k+=1
-			for i in range(emb_sentences.size()[1]):
-				emb_sentences_expanded[m][k] = torch.cat((emb_sentences[m][i], start_token), 0)
-				k+=1
+		max_len = emb_sentences.size(dim=1)
+# 		print(emb_sentences.shape)
+# 		print(max_len)
+		for i in range(max_len):
+			start_idx = i * max_len
+			end_idx = start_idx + max_len
+			to_cat = torch.clone(emb_sentences[:,i])
+			to_cat = to_cat.repeat(1, max_len)
+			to_cat = torch.reshape(to_cat, (emb_sentences.size(dim=0), emb_sentences.size(dim=1), emb_sentences.size(dim=2)))
+			to_cat[:,i] = torch.clone(start_token)
+			cat = torch.cat((emb_sentences, to_cat), 2)
+# 			print(cat.shape)
+			emb_sentences_expanded[:,start_idx:end_idx] = cat
 		emb_words = emb_sentences_expanded[att_sentences_expanded, :]
-# 		print("logits")
-# 		print(logits.size())
-# 		print("emb words")
-# 		print(emb_words.size())
 		# [batch_size] x [combinations (parent, child) ] x [num_labels]
 		logits[att_sentences_expanded, :] = self._mlp(emb_words)  # (num_words, num_labels) -> (batch_size, max_len, num_labels)
-# 		print(logits.size())
 		# logits are [batch_size] x [combinations (parent, child) ] x [num_labels]
 		return logits
 
 	def get_labels(self, lbl_logits):
 		# gather word with highest root probability for each sentence
 		#logits [batch size] x [child] x [parent] x [num labels]
-		lbl_logits = F.softmax(lbl_logits, dim=-2)
-		num_labels = lbl_logits.size(dim=3)
+# 		logits now of batch size x child x numlabels
+
+		lbl_logits = F.softmax(lbl_logits, dim=-1)
 		lbl_logits = torch.nan_to_num(lbl_logits, nan=float('-inf'))
-		roots = torch.argmax(lbl_logits[:, :,:, self._root_label], dim=-2)  # (batch_size, 1)
-		roots_max = torch.max(roots.values, dim=-1)
-		roots_final = roots.indices[:,roots_max.indices[:]]
-		roots_final = torch.diagonal(roots_final)
+		roots = torch.argmax(lbl_logits[:, :, self._root_label], dim=-1)  # (batch_size, 1)
 		# set root logits to -inf to prevent multiple roots
 		lbl_logits_noroot = lbl_logits.detach().clone()
-		lbl_logits_noroot[:, :, :, self._root_label] = torch.ones(
-			(lbl_logits.shape[0], lbl_logits.shape[1], lbl_logits.shape[2]),
+		lbl_logits_noroot[:, :, self._root_label] = torch.ones(
+			(lbl_logits.shape[0], lbl_logits.shape[1]),
 			device=lbl_logits.device
 		) * float('-inf')
-		pred_label_logits = torch.flatten(lbl_logits_noroot, start_dim=2, end_dim=3) # (batch_size, max_len, max_len*num_labels)
-
 		# get predicted labels with maximum probability (padding should have -inf)
-		labels = torch.argmax(lbl_logits_noroot, dim=-1)%num_labels  # (batch_size, max_len)
+		labels = torch.argmax(lbl_logits_noroot, dim=-1)  # (batch_size, max_len)
 		# add true root labels
 		labels[torch.arange(lbl_logits.shape[0]), roots] = self._root_label
 		# add -1 padding
 		labels[(lbl_logits[:, :, 0] == float('-inf'))] = -1
 
-		return roots_final, labels
+		
+# 		lbl_logits = F.softmax(lbl_logits, dim=-1)
+# 		num_labels = lbl_logits.size(dim=3)
+
+# 		#This maxes over child
+# 		roots = torch.max(lbl_logits[:, :,:, self._root_label], dim=-2)  # (batch_size, parent, 1)
+		
+# 		roots_max = torch.max(roots.values, dim=-1) # (batch_size, 1)
+	
+	
+# 		roots_final = roots.indices[:,roots_max.indices[:]]
+# 		roots_final = torch.diagonal(roots_final)
+# 		roots_final = torch.unsqueeze(roots_final,1)
+# 		# set root logits to -inf to prevent multiple roots
+# 		lbl_logits_noroot = lbl_logits.detach().clone()
+# 		lbl_logits_noroot[:, :, :, self._root_label] = torch.ones(
+# 			(lbl_logits.shape[0], lbl_logits.shape[1], lbl_logits.shape[2]),
+# 			device=lbl_logits.device
+# 		) * float('-inf')
+		
+# 		pred_label_logits = torch.transpose(lbl_logits_noroot, 2, 3)
+# 		#                                                                                           child,   parent*num_labels 
+# 		pred_label_logits = torch.flatten(lbl_logits_noroot, start_dim=2, end_dim=3) # (batch_size, max_len, max_len*num_labels)
+		
+# 		# get predicted labels with maximum probability (padding should have -inf)
+# 		# add true root labels
+# 		labels = torch.argmax(pred_label_logits,dim=-1) % (num_labels)
+# 		labels[torch.arange(lbl_logits.shape[0]), roots_final.flatten()] = self._root_label
+# 		# add -1 padding
+# 		labels[(pred_label_logits[:, :, 0] == float('-inf'))%(num_labels)] = -1
+
+		return roots, labels
 	
 class LabelClassifier(nn.Module):
 	def __init__(self, input_dim, num_labels, root_label):

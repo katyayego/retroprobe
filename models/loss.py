@@ -26,15 +26,17 @@ class RootedDependencyLoss(nn.Module):
 		self.stats['loss_dist'] = float(dist_loss.detach())
 
 		# flatten logits and labels across all sequences
-		max_len = pred_label_logits.size(dim=1)
-		pred_label_logits = torch.flatten(pred_label_logits, start_dim=0, end_dim=2) # (batch_size * max_len, num_labels)
+# 		max_len = pred_label_logits.size(dim=1)
+# 		pred_label_logits = torch.sum(pred_label_logits, dim=2)
+# 		pred_label_logits = torch.flatten(pred_label_logits, start_dim=0, end_dim=1) # (batch_size * max_len, num_labels)
+# # 		trgt = torch.unsqueeze(targets['rels'],2)
+# # 		trgt = torch.clone(trgt.expand(-1,-1, trgt.size(-2)))
+# 		flat_trgt_labels = torch.flatten(targets['rels']) # (batch_size * max_len*max_len, )
+		# flatten logits and labels across all sequences
+		pred_label_logits = torch.flatten(pred_label_logits, start_dim=0, end_dim=1) # (batch_size * max_len, num_labels)
 		flat_trgt_labels = torch.flatten(targets['rels']) # (batch_size * max_len, )
-		flat_exp_trgt_labels = torch.zeros((flat_trgt_labels.size(dim=0)*max_len,), dtype = torch.long, device=pred_label_logits.device)
-		for i in range(flat_trgt_labels.size(dim=0)):
-			for j in range(max_len):
-				flat_exp_trgt_labels[i*max_len+j] = flat_trgt_labels[i]
-		# calculate cross-entropy loss over label predictions
-		label_loss = self._label_loss(pred_label_logits, flat_exp_trgt_labels)
+		
+		label_loss = self._label_loss(pred_label_logits, flat_trgt_labels)
 		self.stats['loss_label'] = float(label_loss.detach())
 		loss = dist_loss + label_loss
 
