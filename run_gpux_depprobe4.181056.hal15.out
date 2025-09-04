@@ -1,0 +1,166 @@
+[0/0] ar-padt (depprobe)...
+Path 'exp/run/depprobe/ar-padt-rs41' does not exist. Creating...
+Loaded data splits train: 10142, dev: 2707, test: 2479 with filter <UniversalDependenciesIndexFilter: 12849 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 10142 sentences.
+Loaded dev split with 2707 sentences.
+Constructed 'depprobe' model:
+DepProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [6, 7]>
+  <RootedGraphPredictor: 768 -> 128>
+  <LabelClassifier: 768 -> 37>
+Using RootedDependencyLoss with DependencyDistanceLoss and CrossEntropyLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 131, 768])
+emb words size
+torch.Size([1244, 768])
+[Train | Batch 1 | 0.32%] Acc: no-decode, Loss: 22.48 + 3.73 = 26.2070Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 102, 768])
+emb words size
+torch.Size([1088, 768])
+[Train | Batch 2 | 0.63%] Acc: no-decode, Loss: 19.83 + 3.61 = 23.4403Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 77, 768])
+emb words size
+torch.Size([1183, 768])
+[Train | Batch 3 | 0.95%] Acc: no-decode, Loss: 17.74 + 3.49 = 21.2375Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 151, 768])
+emb words size
+torch.Size([1450, 768])
+[Train | Batch 4 | 1.26%] Acc: no-decode, Loss: 16.45 + 3.39 = 19.8350Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 150, 768])
+emb words size
+torch.Size([1025, 768])
+[Train | Batch 5 | 1.58%] Acc: no-decode, Loss: 15.20 + 3.29 = 18.4914Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 169, 768])
+emb words size
+torch.Size([1289, 768])
+[Train | Batch 6 | 1.89%] Acc: no-decode, Loss: 14.19 + 3.19 = 17.3829Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 193, 768])
+emb words size
+torch.Size([1042, 768])
+[Train | Batch 7 | 2.21%] Acc: no-decode, Loss: 13.37 + 3.11 = 16.4724Ignored unknown kwarg option direction
+[Error] More words than pieces 512 >= 512.
+UD (len=398): ['و', 'أكد', '"', 'ان', 'المبالغ', 'التي', 'حصل', 'علي', 'ها', 'لبنان', 'ب', 'قيمة', '4', 'مليارات', 'و', 'أربع', 'مئة', 'مليون', 'دولار', 'لا', 'تمثل', 'اي', 'دين', 'جديد', 'اضافي', 'على', 'كاهل', 'الخزينة', '،', 'بل', 'هو', 'عملية', 'استبدال', 'ل', 'دين', 'قديم', 'ب', 'فوائد', 'مرتفعة', 'و', 'ل', 'آجال', 'قصيرة', 'ب', 'دين', 'جديد', 'ب', 'فوائد', 'متهاودة', 'جداً', 'و', 'ل', 'آجال', 'طويلة', '.', 'و', 'هناك', 'قصور', 'في', 'النظر', 'لدى', 'البعض', 'عند', 'ما', 'يختصرون', 'مردودية', 'هذه', 'المبالغ', 'ب', 'ما', 'نسبة', 'ه', '7', 'و', '6', 'في', 'المئة', 'على', 'الدين', '،', 'مع', 'ان', 'الموضوع', 'يجب', 'ان', 'ينظر', 'إلي', 'ه', 'ب', 'شمولية', 'ه', 'و', 'آثار', 'ه', 'علي', 'الوضع', 'المالي', 'و', 'الاقتصادي', 'ب', 'رمة', 'ه', '،', 'و', 'هٰذا', 'ما', 'نلمس', 'ه', 'من', 'خلال', 'تغير', 'تصرفات', 'السوق', '.', 'ف', 'أولى', 'النتائج', 'الايجابية', 'ل', 'المؤتمر', 'انعكس', 'على', 'اداء', 'هذه', 'السوق', 'ب', 'حيث', 'صارت', 'تبيع', 'الدولار', 'ل', 'المصرف', 'المركزي', 'بعد', 'ما', 'كان', 'هذا', 'يتدخل', 'شارياً', 'ل', 'ه', '.', 'ان', 'معدلات', 'الفائدة', 'س', 'تشهد', 'مزيداً', 'من', 'الانخفاض', 'المطرد', 'على', 'مدى', 'الاسابيع', 'المقبلة', 'ب', 'ما', 'يوصف', 'ب', 'الجهد', 'الاضافي', 'الذي', 'يجب', 'ان', 'يبذل', 'ل', 'كسر', 'قفل', 'الفوائد', 'العالية', '.', 'ف', 'الموضوع', 'هو', 'ب', 'الأثر', 'التراكمي', 'و', 'تداعيات', 'ذلك', 'على', 'السوق', 'و', 'ب', 'ما', 'يسمى', 'التقاوي', 'و', 'ليس', 'ب', 'أخذ', 'الامور', 'ب', 'فردية', 'ها', '.', 'مع', 'الاشارة', 'الى', 'ان', 'سندات', 'الخزينة', 'السيادية', 'تباع', 'حالياً', 'في', 'الاسواق', 'بـ', '101', 'في', 'المئة', 'بعد', 'ما', 'كانت', 'تباع', 'ب', 'نحو', '80', 'و', '90', 'في', 'المئة', 'قبل', 'التحولات', 'الاخيرة', '.', 'ف', 'العالم', 'محضنا', 'الثقة', 'استناداً', 'الى', 'رغبة', 'ه', 'في', 'المساعدة', 'و', 'بناء', 'على', 'الجدية', 'التي', 'أبدينا', 'ها', '،', 'لذلك', 'يجب', 'ان', 'نزيد', 'عامل', 'الثقة', 'ب', 'أنفس', 'نا', 'و', 'ليس', 'هناك', 'مجال', 'ل', 'إضاعة', 'هذه', 'الفرصة', 'التي', 'اعطيت', 'ل', 'نا', '،', 'و', 'إذا', 'تابعنا', 'برنامج', 'نا', 'ف', 'س', 'نجد', 'دولاً', 'اخرى', 'في', 'العالم', 'س', 'تتدخل', 'ل', 'تساعد', 'نا', '.', 'و', 'هٰذا', 'يشكل', 'ب', 'النسبة', 'إلي', 'نا', 'تحدياً', 'جديداً', '،', 'و', 'يضع', 'نا', 'امام', 'مسؤوليات', 'كبرى', 'في', 'الوزارة', 'ب', 'كل', 'قطاعات', 'ها', 'و', 'موظفي', 'ها', 'ل', 'أن', 'نلزم', 'طريق', 'الاصلاح', 'و', 'التغيير', 'ب', 'تحسين', 'نوعية', 'أداء', 'نا', 'و', 'إنتاجية', 'نا', 'و', 'الاستمرار', 'في', 'تحسين', 'العلاقة', 'مع', 'المواطن', 'و', 'تسهيل', 'الامور', 'ل', 'ه', 'في', 'شتى', 'المجالات', '،', 'و', 'كذٰلك', 'الحفاظ', 'على', 'حقوق', 'الخزينة', 'و', 'السهر', 'على', 'المصلحة', 'العامة', 'و', 'هٰذه', 'ليست', 'وظيفة', 'نا', 'فقط', 'بل', 'هذا', 'قدر', 'نا', '.', 'و', 'س', 'نبقى', 'نسعى', 'الى', 'تحقيق', 'الحد', 'الادنى', 'من', 'الارقام', 'الموجودة', 'في', 'الموازنة', 'و', 'التزام', 'ها', '،', 'كما', 'لدي', 'نا', 'مصلحة', 'في', 'زيادة', 'واردات', 'الخزينة', 'ب', 'الحق', 'و', 'ليس', 'ب', 'التشجيع', 'او', 'ب', 'التسلط', '"', '.']
+LM (len=512): ['[CLS]', 'و', 'أ', '##كد', '"', 'ان', 'ال', '##م', '##بال', '##غ', 'التي', 'حصل', 'علي', 'ها', 'لبنان', 'ب', 'قيمة', '4', 'مل', '##يار', '##ات', 'و', 'أربع', 'م', '##ئة', 'مليون', 'دولار', 'لا', 'تم', '##ثل', 'ا', '##ي', 'دي', '##ن', 'جديد', 'ا', '##ضا', '##في', 'على', 'ك', '##اه', '##ل', 'ال', '##خ', '##زين', '##ة', '،', 'بل', 'هو', 'عملية', 'است', '##بد', '##ال', 'ل', 'دي', '##ن', 'قد', '##يم', 'ب', 'ف', '##وا', '##ئد', 'م', '##رت', '##فع', '##ة', 'و', 'ل', 'آ', '##جا', '##ل', 'ق', '##صيرة', 'ب', 'دي', '##ن', 'جديد', 'ب', 'ف', '##وا', '##ئد', 'م', '##تها', '##ودة', 'جدا', '##ً', 'و', 'ل', 'آ', '##جا', '##ل', 'طويلة', '.', 'و', 'هناك', 'ق', '##صور', 'في', 'النظر', 'لدى', 'البعض', 'عند', 'ما', 'ي', '##خت', '##صر', '##ون', 'مرد', '##ود', '##ية', 'هذه', 'ال', '##م', '##بال', '##غ', 'ب', 'ما', 'نسبة', 'ه', '7', 'و', '6', 'في', 'ال', '##م', '##ئة', 'على', 'الدين', '،', 'مع', 'ان', 'ال', '##مو', '##ض', '##وع', 'يجب', 'ان', 'ي', '##ن', '##ظر', 'إلي', 'ه', 'ب', 'ش', '##مول', '##ية', 'ه', 'و', 'آثار', 'ه', 'علي', 'ال', '##وضع', 'ال', '##مال', '##ي', 'و', 'ال', '##اق', '##ت', '##صاد', '##ي', 'ب', 'ر', '##مة', 'ه', '،', 'و', 'ه', '##ٰ', '##ذا', 'ما', 'ن', '##لم', '##س', 'ه', 'من', 'خلال', 'ت', '##غير', 'ت', '##صرف', '##ات', 'ال', '##سوق', '.', 'ف', 'أول', '##ى', 'ال', '##نت', '##ا', '##ئ', '##ج', 'ال', '##اي', '##جاب', '##ية', 'ل', 'ال', '##م', '##ؤتمر', 'ان', '##عكس', 'على', 'ا', '##داء', 'هذه', 'ال', '##سوق', 'ب', 'حيث', 'ص', '##ارت', 'ت', '##بيع', 'الدول', '##ار', 'ل', 'ال', '##م', '##صرف', 'المركزي', 'بعد', 'ما', 'كان', 'هذا', 'ي', '##ت', '##دخل', 'ش', '##اري', '##اً', 'ل', 'ه', '.', 'ان', 'معدل', '##ات', 'ال', '##فا', '##ئدة', 'س', 'ت', '##ش', '##هد', 'م', '##زيد', '##اً', 'من', 'ال', '##ان', '##خ', '##فا', '##ض', 'ال', '##م', '##طر', '##د', 'على', 'مدى', 'ال', '##اس', '##اب', '##يع', 'ال', '##م', '##قبل', '##ة', 'ب', 'ما', 'ي', '##و', '##صف', 'ب', 'ال', '##جه', '##د', 'ال', '##اض', '##اف', '##ي', 'الذي', 'يجب', 'ان', 'ي', '##ب', '##ذ', '##ل', 'ل', 'ك', '##سر', 'ق', '##فل', 'ال', '##ف', '##وا', '##ئد', 'العالي', '##ة', '.', 'ف', 'ال', '##مو', '##ض', '##وع', 'هو', 'ب', 'ال', '##أثر', 'ال', '##تر', '##اكم', '##ي', 'و', 'ت', '##دا', '##عي', '##ات', 'ذلك', 'على', 'ال', '##سوق', 'و', 'ب', 'ما', 'يسمى', 'ال', '##ت', '##قا', '##وي', 'و', 'ليس', 'ب', 'أ', '##خذ', 'ال', '##ام', '##ور', 'ب', 'فرد', '##ية', 'ها', '.', 'مع', 'ال', '##اش', '##ارة', 'ال', '##ى', 'ان', 'سن', '##دات', 'ال', '##خ', '##زين', '##ة', 'ال', '##سي', '##ادي', '##ة', 'ت', '##با', '##ع', 'حالياً', 'في', 'ال', '##اس', '##وا', '##ق', 'بـ', '101', 'في', 'ال', '##م', '##ئة', 'بعد', 'ما', 'كانت', 'ت', '##با', '##ع', 'ب', 'نحو', '80', 'و', '90', 'في', 'ال', '##م', '##ئة', 'قبل', 'ال', '##ت', '##حول', '##ات', 'ال', '##اخ', '##يرة', '.', 'ف', 'العالم', 'م', '##ح', '##ض', '##نا', 'ال', '##ث', '##قة', 'است', '##نا', '##داً', 'ال', '##ى', 'ر', '##غ', '##بة', 'ه', 'في', 'ال', '##مساعدة', 'و', 'بناء', 'على', 'ال', '##جد', '##ية', 'التي', 'أ', '##بد', '##ينا', 'ها', '،', 'لذلك', 'يجب', 'ان', 'ن', '##زيد', 'عامل', 'ال', '##ث', '##قة', 'ب', 'أن', '##فس', 'ن', '##ا', 'و', 'ليس', 'هناك', 'مجال', 'ل', 'إ', '##ضا', '##عة', 'هذه', 'ال', '##فر', '##صة', 'التي', 'ا', '##ع', '##طي', '##ت', 'ل', 'ن', '##ا', '،', 'و', 'إذا', 'تابع', '##نا', 'برنامج', 'ن', '##ا', 'ف', 'س', 'ن', '##جد', 'دول', '##اً', 'ا', '##خرى', 'في', 'العالم', 'س', 'ت', '##ت', '##دخل', 'ل', 'ت', '##ساعد', 'ن', '##ا', '.', 'و', 'ه', '##ٰ', '##ذا', 'ي', '##شكل', 'ب', 'ال', '##نس', '##بة', 'إلي', 'ن', '##ا', 'ت', '##حد', '##ياً', '[SEP]']. Skipped batch.
+Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 123, 768])
+emb words size
+torch.Size([1065, 768])
+[Train | Batch 9 | 2.84%] Acc: no-decode, Loss: 12.65 + 3.02 = 15.6743Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 149, 768])
+emb words size
+torch.Size([1301, 768])
+[Train | Batch 10 | 3.16%] Acc: no-decode, Loss: 11.98 + 2.93 = 14.9147Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 90, 768])
+emb words size
+torch.Size([1107, 768])
+[Train | Batch 11 | 3.47%] Acc: no-decode, Loss: 11.47 + 2.87 = 14.3368Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 78, 768])
+emb words size
+torch.Size([1064, 768])
+[Train | Batch 12 | 3.79%] Acc: no-decode, Loss: 10.99 + 2.80 = 13.7893Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 68, 768])
+emb words size
+torch.Size([1259, 768])
+[Train | Batch 13 | 4.10%] Acc: no-decode, Loss: 10.52 + 2.72 = 13.2463Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 88, 768])
+emb words size
+torch.Size([1189, 768])
+[Train | Batch 14 | 4.42%] Acc: no-decode, Loss: 10.05 + 2.66 = 12.7156Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 88, 768])
+emb words size
+torch.Size([1136, 768])
+[Train | Batch 15 | 4.73%] Acc: no-decode, Loss: 9.65 + 2.60 = 12.2519Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 77, 768])
+emb words size
+torch.Size([1108, 768])
+[Train | Batch 16 | 5.05%] Acc: no-decode, Loss: 9.28 + 2.54 = 11.8180Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 150, 768])
+emb words size
+torch.Size([1143, 768])
+[Train | Batch 17 | 5.36%] Acc: no-decode, Loss: 8.93 + 2.48 = 11.4159Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 88, 768])
+emb words size
+torch.Size([1156, 768])
+[Train | Batch 18 | 5.68%] Acc: no-decode, Loss: 8.60 + 2.44 = 11.0323Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 94, 768])
+emb words size
+torch.Size([1184, 768])
+[Train | Batch 19 | 5.99%] Acc: no-decode, Loss: 8.31 + 2.39 = 10.6975Ignored unknown kwarg option direction
+emb sentences size
+torch.Size([32, 92, 768])
+emb words size
+torch.Size([1003, 768])
+[Train | Batch 20 | 6.31%] Acc: no-decode, Loss: 8.04 + 2.34 = 10.3813Ignored unknown kwarg option direction
