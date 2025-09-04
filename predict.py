@@ -81,7 +81,6 @@ def main():
 		with torch.no_grad():
 			# get graphs and label logits from parser
 			parse = parser(sentences)
-
 		# store predicted dependency data
 		for sidx, udidx in enumerate(range(start_idx, end_idx)):
 			cur_sentence = ud_target[udidx]
@@ -93,7 +92,6 @@ def main():
 				if 'labels' in parse:
 					label = UD_RELATION_TYPES[int(parse['labels'][sidx, widx])]
 					word.deprel = label
-
 		# print progress
 		sys.stdout.write(f"\r[{(cursor*100)/len(ud_target):.2f}%] Predicting...")
 		sys.stdout.flush()

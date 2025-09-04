@@ -17,25 +17,29 @@ UD_PATH=~/data/acl-datasets/
 # TARGETS=( ar-padt en-ewt eu-bdt fi-tdt he-htb hi-hdtb it-isdt ja-gsd ko-gsd ru-syntagrus sv-talbanken tr-imst zh-gsd )
 # LANGUAGES=( Arabic English Basque Finnish Hebrew Hindi Italian Japanese Korean Russian Swedish Turkish Chinese )
 # TREEBANKS=( PADT EWT BDT TDT HTB HDTB ISDT GSD GSD SynTagRus Talbanken IMST GSD )
-TARGETS=( en-ewt )
-LANGUAGES=( English )
-TREEBANKS=( EWT )
+TARGETS=( sv-talbanken )
+LANGUAGES=( Swedish )
+TREEBANKS=( Talbanken )
+# TARGETS=( hi-hdtb )
+# LANGUAGES=( Hindi )
+# TREEBANKS=( HDTB )
 SPLIT="test"
 # MODELS=( directed depprobe retroprobe )
-MODELS=( retroprobe )
-# MODELS=( depprobe )
+# MODELS=( depprobe retroprobe )
+MODELS=( depprobe )
+# MODELS=( retroprobe )
 # SEEDS=( 41 42 43 )
 SEEDS=( 41 )
 
 # set up data
-# mkdir -p exp/data
-# echo "Creating Universal Dependencies split definition..."
-# python data/split.py $UD_PATH exp/data/ --keep_all
-# for idx in "${!TARGETS[@]}"; do
-# 	echo "Creating split definition for treebank ${TARGETS[$idx]}..."
-# 	mkdir exp/data/"${TARGETS[$idx]}"
-# 	python data/filter.py $UD_PATH exp/data/split.pkl exp/data/"${TARGETS[$idx]}" -il "${LANGUAGES[$idx]}" -it "${TREEBANKS[$idx]}"
-# done
+mkdir -p exp/data
+echo "Creating Universal Dependencies split definition..."
+python data/split.py $UD_PATH exp/data/ --keep_all
+for idx in "${!TARGETS[@]}"; do
+	echo "Creating split definition for treebank ${TARGETS[$idx]}..."
+	mkdir exp/data/"${TARGETS[$idx]}"
+	python data/filter.py $UD_PATH exp/data/split.pkl exp/data/"${TARGETS[$idx]}" -il "${LANGUAGES[$idx]}" -it "${TREEBANKS[$idx]}"
+done
 
 # run experiments
 mkdir -p exp/run
@@ -116,7 +120,7 @@ for rsd_idx in "${!SEEDS[@]}"; do
 # 				python predict.py ${exp_path} ${target_file} ${pred_file} \
 # 					-pt rooted -el 6 7 \
 				python predict.py ${exp_path} ${target_file} ${pred_file} \
-					-pt retroprobe -el 6 7 \
+					-pt retroprobe -el 6 7\
 				;;
 
 				*)

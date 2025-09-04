@@ -122,6 +122,7 @@ def setup_model(lm_name, dep_dim, parser_type='depprobe', state_dict=None, emb_l
 
 	# check CUDA availability
 	if torch.cuda.is_available():
+# 		parser = nn.DataParallel(parser)
 		parser.to(torch.device('cuda'))
 		logging.info(f"Moved parser to CUDA device ('{torch.device('cuda')}').")
 

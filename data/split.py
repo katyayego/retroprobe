@@ -53,6 +53,7 @@ def main():
 	for tbf in ud.get_treebanks():
 		# get name of current file's treebank
 		tb_name = tbf.get_language() + '/' + tbf.get_treebank_name()
+		print(tb_name)
 		if tb_name not in tb_split_idcs:
 			tb_split_idcs[tb_name] = OrderedDict()
 		# extract split from current file
@@ -133,6 +134,9 @@ def main():
 		split_indices['train'] += cur_split_idcs['train']
 		split_indices['dev'] += cur_split_idcs['dev']
 		split_indices['test'] += cur_split_idcs['test']
+# 		print(split_indices['dev'])
+
+# 		print(cur_split_idcs['train'])
 
 		# print statistics
 		num_idcs = sum([len(cur_split_idcs['train']), len(cur_split_idcs['dev']), len(cur_split_idcs['test'])])
@@ -140,7 +144,11 @@ def main():
 		for split in ['train', 'dev', 'test']:
 			logging.info(f"  {split.capitalize()}: {len(cur_split_idcs[split])} sentences ({len(cur_split_idcs[split])/num_idcs:.4f})")
 			if cur_split_info[split]: logging.info(f"    {' | '.join(cur_split_info[split])}")
-
+# 	print(split_indices[test])
+# 	for i in split_indices['train']:
+# 		print(i)
+# 		if lang == "Korean":
+# 			print(lang)
 	# print overall statistics
 	num_idcs = sum([len(split_indices['train']), len(split_indices['dev']), len(split_indices['test'])])
 	logging.info(f"UD (n={num_idcs}):")
