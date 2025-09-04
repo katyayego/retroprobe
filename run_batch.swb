@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#SBATCH --job-name="run_gpux8_depprobe"
+#SBATCH --output="run_gpux_depprobe4.%j.%N.out"
+#SBATCH --error="run_gpux_depprobe.%j.%N.err"
+#SBATCH --partition=gpu
+#SBATCH --time=24
+
+srun ./run-acl.sh

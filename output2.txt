@@ -1,0 +1,1483 @@
+[0/0] ru-syntagrus (directed)...
+Path 'exp/run/directed/ru-syntagrus-rs41' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'directed' model:
+DirectedProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [7]>
+  <DirectedGraphPredictor: 768 -> 128>
+Moved parser to CUDA device ('cuda').
+Using DirectedProbingLoss with DependencyDepthLoss and DependencyDistanceLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs41/ru-syntagrus-test-predict.conllu'
+directed-ru-syntagrus-rs41 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs41/sv-talbanken-test-predict.conllu'
+directed-ru-syntagrus-rs41 -> sv-talbanken (test):
+--------------------
+[0/1] ru-syntagrus (depprobe)...
+Path 'exp/run/depprobe/ru-syntagrus-rs41' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'depprobe' model:
+DepProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [6, 7]>
+  <RootedGraphPredictor: 768 -> 128>
+  <LabelClassifier: 768 -> 37>
+Moved parser to CUDA device ('cuda').
+Using RootedDependencyLoss with DependencyDistanceLoss and CrossEntropyLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs41/ru-syntagrus-test-predict.conllu'
+depprobe-ru-syntagrus-rs41 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs41/sv-talbanken-test-predict.conllu'
+depprobe-ru-syntagrus-rs41 -> sv-talbanken (test):
+--------------------
+[1/0] sv-talbanken (directed)...
+Path 'exp/run/directed/sv-talbanken-rs41' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'directed' model:
+DirectedProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [7]>
+  <DirectedGraphPredictor: 768 -> 128>
+Moved parser to CUDA device ('cuda').
+Using DirectedProbingLoss with DependencyDepthLoss and DependencyDistanceLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs41/ru-syntagrus-test-predict.conllu'
+directed-sv-talbanken-rs41 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs41/sv-talbanken-test-predict.conllu'
+directed-sv-talbanken-rs41 -> sv-talbanken (test):
+--------------------
+[1/1] sv-talbanken (depprobe)...
+Path 'exp/run/depprobe/sv-talbanken-rs41' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'depprobe' model:
+DepProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [6, 7]>
+  <RootedGraphPredictor: 768 -> 128>
+  <LabelClassifier: 768 -> 37>
+Moved parser to CUDA device ('cuda').
+Using RootedDependencyLoss with DependencyDistanceLoss and CrossEntropyLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs41/ru-syntagrus-test-predict.conllu'
+depprobe-sv-talbanken-rs41 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs41/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs41/sv-talbanken-test-predict.conllu'
+depprobe-sv-talbanken-rs41 -> sv-talbanken (test):
+--------------------
+[0/0] ru-syntagrus (directed)...
+Path 'exp/run/directed/ru-syntagrus-rs42' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'directed' model:
+DirectedProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [7]>
+  <DirectedGraphPredictor: 768 -> 128>
+Moved parser to CUDA device ('cuda').
+Using DirectedProbingLoss with DependencyDepthLoss and DependencyDistanceLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs42/ru-syntagrus-test-predict.conllu'
+directed-ru-syntagrus-rs42 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs42/sv-talbanken-test-predict.conllu'
+directed-ru-syntagrus-rs42 -> sv-talbanken (test):
+--------------------
+[0/1] ru-syntagrus (depprobe)...
+Path 'exp/run/depprobe/ru-syntagrus-rs42' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'depprobe' model:
+DepProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [6, 7]>
+  <RootedGraphPredictor: 768 -> 128>
+  <LabelClassifier: 768 -> 37>
+Moved parser to CUDA device ('cuda').
+Using RootedDependencyLoss with DependencyDistanceLoss and CrossEntropyLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs42/ru-syntagrus-test-predict.conllu'
+depprobe-ru-syntagrus-rs42 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs42/sv-talbanken-test-predict.conllu'
+depprobe-ru-syntagrus-rs42 -> sv-talbanken (test):
+--------------------
+[1/0] sv-talbanken (directed)...
+Path 'exp/run/directed/sv-talbanken-rs42' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'directed' model:
+DirectedProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [7]>
+  <DirectedGraphPredictor: 768 -> 128>
+Moved parser to CUDA device ('cuda').
+Using DirectedProbingLoss with DependencyDepthLoss and DependencyDistanceLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs42/ru-syntagrus-test-predict.conllu'
+directed-sv-talbanken-rs42 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs42/sv-talbanken-test-predict.conllu'
+directed-sv-talbanken-rs42 -> sv-talbanken (test):
+--------------------
+[1/1] sv-talbanken (depprobe)...
+Path 'exp/run/depprobe/sv-talbanken-rs42' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'depprobe' model:
+DepProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [6, 7]>
+  <RootedGraphPredictor: 768 -> 128>
+  <LabelClassifier: 768 -> 37>
+Moved parser to CUDA device ('cuda').
+Using RootedDependencyLoss with DependencyDistanceLoss and CrossEntropyLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs42/ru-syntagrus-test-predict.conllu'
+depprobe-sv-talbanken-rs42 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs42/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs42/sv-talbanken-test-predict.conllu'
+depprobe-sv-talbanken-rs42 -> sv-talbanken (test):
+--------------------
+[0/0] ru-syntagrus (directed)...
+Path 'exp/run/directed/ru-syntagrus-rs43' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'directed' model:
+DirectedProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [7]>
+  <DirectedGraphPredictor: 768 -> 128>
+Moved parser to CUDA device ('cuda').
+Using DirectedProbingLoss with DependencyDepthLoss and DependencyDistanceLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs43/ru-syntagrus-test-predict.conllu'
+directed-ru-syntagrus-rs43 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/ru-syntagrus-rs43/sv-talbanken-test-predict.conllu'
+directed-ru-syntagrus-rs43 -> sv-talbanken (test):
+--------------------
+[0/1] ru-syntagrus (depprobe)...
+Path 'exp/run/depprobe/ru-syntagrus-rs43' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.seq_relationship.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'depprobe' model:
+DepProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [6, 7]>
+  <RootedGraphPredictor: 768 -> 128>
+  <LabelClassifier: 768 -> 37>
+Moved parser to CUDA device ('cuda').
+Using RootedDependencyLoss with DependencyDistanceLoss and CrossEntropyLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs43/ru-syntagrus-test-predict.conllu'
+depprobe-ru-syntagrus-rs43 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/ru-syntagrus-rs43/sv-talbanken-test-predict.conllu'
+depprobe-ru-syntagrus-rs43 -> sv-talbanken (test):
+--------------------
+[1/0] sv-talbanken (directed)...
+Path 'exp/run/directed/sv-talbanken-rs43' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'directed' model:
+DirectedProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [7]>
+  <DirectedGraphPredictor: 768 -> 128>
+Moved parser to CUDA device ('cuda').
+Using DirectedProbingLoss with DependencyDepthLoss and DependencyDistanceLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs43/ru-syntagrus-test-predict.conllu'
+directed-sv-talbanken-rs43 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/directed/sv-talbanken-rs43/sv-talbanken-test-predict.conllu'
+directed-sv-talbanken-rs43 -> sv-talbanken (test):
+--------------------
+[1/1] sv-talbanken (depprobe)...
+Path 'exp/run/depprobe/sv-talbanken-rs43' does not exist. Creating...
+Loaded data splits train: 0, dev: 0, test: 0 with filter <UniversalDependenciesIndexFilter: 0 indices>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 7664 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-dev.conllu): 909 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-test.conllu): 680 sentences>.
+Loaded <UniversalDependenciesTreebank (ar_padt-ud-train.conllu): 6075 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8993 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-dev.conllu): 1798 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-test.conllu): 1799 sentences>.
+Loaded <UniversalDependenciesTreebank (eu_bdt-ud-train.conllu): 5396 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 4997 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-dev.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-test.conllu): 500 sentences>.
+Loaded <UniversalDependenciesTreebank (zh_gsd-ud-train.conllu): 3997 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16621 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-dev.conllu): 2001 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-test.conllu): 2077 sentences>.
+Loaded <UniversalDependenciesTreebank (en_ewt-ud-train.conllu): 12543 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 15136 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-dev.conllu): 1364 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-test.conllu): 1555 sentences>.
+Loaded <UniversalDependenciesTreebank (fi_tdt-ud-train.conllu): 12217 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6216 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-dev.conllu): 484 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-test.conllu): 491 sentences>.
+Loaded <UniversalDependenciesTreebank (he_htb-ud-train.conllu): 5241 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 16647 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-dev.conllu): 1659 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-test.conllu): 1684 sentences>.
+Loaded <UniversalDependenciesTreebank (hi_hdtb-ud-train.conllu): 13304 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 14167 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-dev.conllu): 564 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-test.conllu): 482 sentences>.
+Loaded <UniversalDependenciesTreebank (it_isdt-ud-train.conllu): 13121 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 8100 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-dev.conllu): 507 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-test.conllu): 543 sentences>.
+Loaded <UniversalDependenciesTreebank (ja_gsd-ud-train.conllu): 7050 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6339 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-dev.conllu): 950 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-test.conllu): 989 sentences>.
+Loaded <UniversalDependenciesTreebank (ko_gsd-ud-train.conllu): 4400 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 61889 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-dev.conllu): 6584 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Loaded <UniversalDependenciesTreebank (ru_syntagrus-ud-train.conllu): 48814 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 6026 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-dev.conllu): 504 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Loaded <UniversalDependenciesTreebank (sv_talbanken-ud-train.conllu): 4303 sentences>.
+Loaded <UniversalDependenciesTreebank (all.conllu): 5635 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-dev.conllu): 988 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-test.conllu): 983 sentences>.
+Loaded <UniversalDependenciesTreebank (tr_imst-ud-train.conllu): 3664 sentences>.
+Loaded <UniversalDependencies: 52 treebanks, 356860 sentences> with 37 dependency relations.
+Loaded training split with 0 sentences.
+Loaded dev split with 0 sentences.
+Some weights of the model checkpoint at bert-base-multilingual-cased were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Constructed 'depprobe' model:
+DepProbe:
+  <BertModel: "bert-base-multilingual-cased", Layers [6, 7]>
+  <RootedGraphPredictor: 768 -> 128>
+  <LabelClassifier: 768 -> 37>
+Moved parser to CUDA device ('cuda').
+Using RootedDependencyLoss with DependencyDistanceLoss and CrossEntropyLoss.
+Optimizing using AdamW with learning rate 0.001.
+Scheduler ReduceLROnPlateau reduces learning rate by 0.1 after 1 epoch without improvement.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/train.py", line 147, in <module>
+    main()
+  File "/home/yay2/depprobe/train.py", line 105, in main
+    statistics('train', stats, cur_stats, ep_idx, args.epochs)
+  File "/home/yay2/depprobe/utils/setup.py", line 312, in statistics
+    f"Loss: {stats[f'{mode}/loss'][-1]:.4f}"
+IndexError: list index out of range
+Loaded target <UniversalDependenciesTreebank (ru_syntagrus-ud-test.conllu): 6491 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs43/ru-syntagrus-test-predict.conllu'
+depprobe-sv-talbanken-rs43 -> ru-syntagrus (test):
+--------------------
+Loaded target <UniversalDependenciesTreebank (sv_talbanken-ud-test.conllu): 1219 sentences>.
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/predict.py", line 151, in <module>
+    main()
+  File "/home/yay2/depprobe/predict.py", line 63, in main
+    checkpoint = torch.load(os.path.join(args.exp_path, 'newest.tar'))
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/opt/miniconda3/envs/opence-v1.5.1/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs43/newest.tar'
+Traceback (most recent call last):
+  File "/home/yay2/depprobe/eval/dependencies.py", line 102, in <module>
+    main()
+  File "/home/yay2/depprobe/eval/dependencies.py", line 43, in main
+    ud_prediction = UniversalDependenciesTreebank.from_conllu(args.prediction, name=os.path.basename(args.prediction))
+  File "/home/yay2/depprobe/eval/../data/ud.py", line 194, in from_conllu
+    with open(path, 'r', encoding='utf8') as fp:
+FileNotFoundError: [Errno 2] No such file or directory: 'exp/run/depprobe/sv-talbanken-rs43/sv-talbanken-test-predict.conllu'
+depprobe-sv-talbanken-rs43 -> sv-talbanken (test):
+--------------------
+All experiments completed.
